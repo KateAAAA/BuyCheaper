@@ -1,0 +1,42 @@
+body {
+	
+}
+.main {
+	margin: 0;
+	padding: 0;
+	width: 600px;
+	height: auto;
+}
+.mainInfo {
+	margin: 0;
+	padding: 0;
+	background-color: #F4F7FF
+}
+
+.product_header {
+	font-weight: bold;
+	font-size: 20px;
+}
+#tableInfo {
+	padding: 3px;
+    width: 200px; /* Ширина таблицы */
+    border-spacing: 0px; /* Расстояние между ячейками */
+    border-color: black;
+    border-width: 1px;
+}
+td.ng-scope {
+	vertical-align: -webkit-baseline-middle;
+}
+td {
+	height: 70px;
+	vertical-align: baseline;
+}
+.titleHeader {
+	font-weight: bold;
+}
+.difFunctions {
+    display: -webkit-box;
+}
+.func {
+	padding: 10px;
+}

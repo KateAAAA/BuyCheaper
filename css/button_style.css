@@ -1,0 +1,31 @@
+.addButtonSupDi {	
+	z-index: 10000;
+	position: fixed; /*absolute - родитель- окно браузера*/
+	right: 0;
+	top:200px;
+	height: 28px;
+	background-color: #FF0097;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #BF0372;
+	color: #520031;
+	width: 28px;
+}
+.addButtonSupDiHover {
+	z-index: 10000;
+	position: fixed; /*absolute - родитель- окно браузера*/
+	right: 0;
+	top:200px;
+	height: 28px;
+	background-color: #19FF00;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #16B305;
+	color: #032100;
+	width: 28px;
+}

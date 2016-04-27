@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "MyApp",
+  "description": "MyApp - simple button",
+  "version": "1.0",
+  "permissions": [
+          "storage"
+        ],
+  "browser_action": {
+  	"default_title": "MyApp",
+    "default_icon":"images/icon.png",
+    "default_popup": "popup.html"
+    },
+ 
+	"background": {
+		"persistent": false,
+		"scripts": ["js/typeArray.js",
+                "js/PopupScript.js"]
+	  },
+
+   
+
+  "options_page": "options.html",
+
+  "content_scripts": [
+    {
+      "matches": ["http://technopoint.ru/*",
+      "http://www.dns-shop.ru/product/*/*/",
+      "http://www.citilink.ru/catalog/*/*/*"
+      ],
+      "js": ["js/PageScript.js"],
+      "css": ["css/button_style.css"]
+    }
+  ]
+}

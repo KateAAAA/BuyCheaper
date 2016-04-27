@@ -1,0 +1,52 @@
+<html ng-app="phonecatApp">
+<head>
+  <script src="angular.js"></script>
+  <script src="js/controllers.js"></script>
+ 
+   <title>MyApp</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-controller="PhoneListCtrl">
+<div class="difFunctions">
+  <div class="func">
+    Search: <input ng-model="query">
+  </div>
+  <div class="func">
+    Sort by:
+    <select ng-model="orderProp">
+      <option value="">по порядку добавления</option>
+      <option value="name">по алфавиту</option>
+      <option value="price">по возрастанию цены</option>
+    </select>
+  </div>    
+</div>
+
+<table id = "table1">
+  	<tr>
+      <td>
+        <table id="tableInfo">
+          <tr><td>del</td></tr>
+          <tr><td>Наименование</td></tr>
+          <tr><td>Магазин</td></tr>
+          <tr><td>Цена</td></tr>
+          <tr><td>type</td></tr>
+          <tr><td>other</td></tr>
+        </table>
+      </td>
+  		<td ng-repeat="phone in phones  | filter:query | orderBy:orderProp">
+      <table id="tableInfo">
+        <tr><td class="buttonDelOne"></td></tr>
+        <tr><td class="titleHeader">{{phone.name}}</td></tr>
+        <tr><td>{{phone.store}}</td></tr>
+        <tr><td>{{phone.price}} руб.</td></tr>
+        <tr><td>{{phone.type}}</td></tr>
+      </table>
+      </td>
+  	</tr>
+</table>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/infoScript.js"></script>
+</body>
+</html>
