@@ -88,11 +88,12 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: url(prev.png);
+    width: 20px;
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: url(next.png);
 }
 
 .slick-next
@@ -106,11 +107,11 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: url(next.png);
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: url(next.png);
 }
 
 /* Dots */
@@ -188,7 +189,7 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    content: '';
     text-align: center;
 
     opacity: .25;

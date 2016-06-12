@@ -24,7 +24,7 @@
 	z-index: 10000;
 	position: fixed; /*absolute - родитель- окно браузера*/
 	right: 10px;
-	top:255px;
+	top:242px;
 	height: 25px;
 	width: 80px;
 	background-color: #31809c;
@@ -39,7 +39,7 @@
 	position: fixed; /*absolute - родитель- окно браузера*/
 	right: 10px;
 	cursor:pointer;
-	top:255px;
+	top:242px;
 	height: 25px;
 	width: 80px;
 	background-color: #31809c;

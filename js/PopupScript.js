@@ -1,4 +1,4 @@
-$(function() {
+п»ї$(function() {
 	
 	var storage = chrome.storage.local;
 	storage.get('AllElls', function (data) {
@@ -33,8 +33,8 @@ $(function() {
 	}
 	
 	var clearButton = document.createElement('button');
-	clearButton.innerHTML='Очистить все';
+	clearButton.innerHTML='РћС‡РёСЃС‚РёС‚СЊ РІСЃРµ';
 	clearButton.className='buyButton';
-	addEvent(clearButton,'click',clearContent);  //СЃРј addlisten jquery
+	addEvent(clearButton,'click',clearContent);  //РЎРѓР С addlisten jquery
 	document.body.appendChild(clearButton);	
 });

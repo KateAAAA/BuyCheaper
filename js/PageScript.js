@@ -132,7 +132,7 @@
 	}
 
 	var addEl = document.createElement('div');
-	addEl.innerHTML='<br><br>Понравился товар? <br><br><br> к сравнению';
+	addEl.innerHTML='<br>Понравился товар? <br><br><br> к сравнению';
 	addEl.className = 'buttontext';
 	document.body.appendChild(addEl); 
 

@@ -7,7 +7,7 @@ body {
 	padding: 0;
 	width: 600px;
 	height: auto;
-
+	margin-left: 25px;
 }
 .mainInfo {
 	margin: 0;
@@ -75,8 +75,6 @@ td {
     height:auto;
 }
 .section {
-    border:solid 1px #999;
-    float:left;
     height:auto;
     margin-left:10px;
     width:150px;
@@ -90,6 +88,9 @@ td {
 }
 .TitleOnPopUp {
 	float: left;
+	width: 400px;
+	margin-bottom: 30px;
+	text-align: center;
 }
 .iconOnPopUp {
 	float: right;
