@@ -15,11 +15,7 @@ $(function() {
 		storage.clear();
 		location.reload();		
 	}
-
-	var clearOne = function () {
-		console.log("it work");	
-	}
-
+	
 	var clearButton = document.createElement('button');
 	clearButton.innerHTML='Очистить все';
 	clearButton.className='buyButton1';

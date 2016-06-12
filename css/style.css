@@ -62,7 +62,18 @@ td {
  .c:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Тень */
 }
-
+a {
+	color: #2a829e;
+}
+.firstText{
+	height: 150px;
+    color: #2a829e;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 100px;
+}
 .price {
 	color:black;
 	text-align: center;
@@ -81,6 +92,7 @@ td {
     height:auto;
 }
 .section {
+	text-align: center;
     height:auto;
     margin-left:10px;
     width:150px;
@@ -91,11 +103,11 @@ td {
 .headOnPopUp{
 	width: 600px;
 	display: inline-block;
+	position: fixed;
 }
 .TitleOnPopUp {
 	float: left;
-	width: 400px;
-	margin-bottom: 30px;
+	width: 535px;
 	text-align: center;
 }
 .iconOnPopUp {
@@ -175,5 +187,8 @@ a.ng-binding {
 }
 .sortIcon {
 	width: 24px;
-	
+}
+.slick-slide img {
+    display: block;
+    padding-top: 63px;
 }
