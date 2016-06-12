@@ -9,10 +9,10 @@ $(function() {
 			return element.addEventListener(evnt, funct, false);
 		}
 	}
-
+	
 	var clearContent = function () {
 		$('.content').empty();
-		storage.set({'AllElls': []});
+		storage.clear();
 		location.reload();		
 	}
 
@@ -25,11 +25,6 @@ $(function() {
 	clearButton.className='func';
 	addEvent(clearButton,'click',clearContent);  //см addlisten jquery
 	document.body.childNodes[1].appendChild(clearButton);
-	console.log(document.body.childNodes[3]);
 
-	var buttonDelOne = document.createElement('button');
-	buttonDelOne.innerHTML='delete';
-	buttonDelOne.className='buttonDelOne';
-	addEvent(clearButton,'click',clearOne);  //см addlisten jquery
-	//document.body.childNodes[3].appendChild(buttonDelOne);		
+		
 });

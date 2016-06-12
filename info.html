@@ -1,50 +1,94 @@
 <html ng-app="phonecatApp">
 <head>
-  <script src="angular.js"></script>
+  <script src="js/angular.js"></script>
   <script src="js/controllers.js"></script>
  
-   <title>MyApp</title>
+   <title>BuyCheaper</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body ng-controller="PhoneListCtrl">
 <div class="difFunctions">
-  <div class="func">
-    Search: <input ng-model="query">
+  <div><img src="images/icon.png"  width='35px'></div>
+  <div class="func"  class="find">
+    Поиск: <input ng-model="query">
   </div>
   <div class="func">
-    Sort by:
+    Отсортировать по:
     <select ng-model="orderProp">
-      <option value="">по порядку добавления</option>
-      <option value="name">по алфавиту</option>
-      <option value="price">по возрастанию цены</option>
+      <option value="">дате добавления</option>
+      <option value="name">алфавиту</option>
+      <option value="price">возрастанию</option>
     </select>
   </div>    
 </div>
-
-<table id = "table1">
-  	<tr>
+<div id="main" ng-app>
+    <div class="typeCetegory">
+        <nav class="{{active}}" ng-click="$event.preventDefault()">
+            <a href="#" ng-click="setFilter()">Показать все</a>
+            <a ng-repeat="type in types" href="#" ng-click="setFilter(type)"> {{type}} </a>        
+        </nav>
+    </div>
+    <table id = "table1">
+    <tr>
       <td>
         <table id="tableInfo">
-          <tr><td>del</td></tr>
-          <tr><td>Наименование</td></tr>
-          <tr><td>Магазин</td></tr>
-          <tr><td>Цена</td></tr>
+          <tr><td></td></tr>
+          <tr><td></td></tr>
+          <tr><td>наименование</td></tr>
+          <tr><td>магазин</td></tr>
+          <tr><td>цена</td></tr>
+          <tr><td>категория</td></tr>
+          <tr><td>характеристики</td></tr>
+        </table>
+      </td>
+      <td ng-repeat="phone in phones  | filter:active | orderBy:orderProp">
+      <table id="tableInfo">
+        <tr><td ><div class="delOne"><a ng-click="remove(phone.url)" href="#"><img src="images/del.png" class="delOne"></a></div></td></tr>
+        <tr><td><img src="{{phone.photo}}"  width='90px'></td></tr>
+        <tr><td class="titleHeader"><a href="{{phone.url}}">{{phone.name}}</a></td></tr>
+        <tr><td>{{phone.store}}</td></tr>
+        <tr><td>{{phone.price}}</td></tr>
+        <tr><td>{{phone.type}}</td></tr>
+        <tr><td>{{phone.other}}</td></tr>
+        
+      </table>
+      </td>
+    </tr>
+</table>
+
+
+<!--
+    <p ng-show="active">вы выбрали <b>{{active}}</b>
+    <table id = "table1">
+    <tr>
+      <td>
+        <table id="tableInfo">
+          <tr><td></td></tr>
+          <tr><td>name</td></tr>
+          <tr><td>store/td></tr>
+          <tr><td>price</td></tr>
           <tr><td>type</td></tr>
           <tr><td>other</td></tr>
         </table>
       </td>
-  		<td ng-repeat="phone in phones  | filter:query | orderBy:orderProp">
+     
+      <td ng-repeat="phone in phones | filter:active" class="answer" >
       <table id="tableInfo">
-        <tr><td class="buttonDelOne"></td></tr>
-        <tr><td class="titleHeader">{{phone.name}}</td></tr>
+        <tr><td ><div class="delOne">del</div></td></tr>
+        <tr><td class="titleHeader"><a href="{{phone.url}}">{{phone.name}}</a></td></tr>
         <tr><td>{{phone.store}}</td></tr>
-        <tr><td>{{phone.price}} руб.</td></tr>
+        <tr><td>{{phone.price}}</td></tr>
         <tr><td>{{phone.type}}</td></tr>
       </table>
       </td>
-  	</tr>
+    </tr>
 </table>
+
+
+
+    </p>-->
+</div>
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/infoScript.js"></script>
