@@ -72,21 +72,18 @@
   			if(n>-1) {
   			  var type = TypeArr[i];
   			  break;	
-  			} 
-  		}
-  		if (i == TypeArr.length) {
-  			var type = "неопределено";
-  		}
+  			}   			
+  		}  		
   		var price = document.getElementsByClassName('price-ru nowrap')[0].innerText;
   		var characteristics = document.getElementsByClassName('options-list')[0].children[0].innerText;
   		var store = 'технопоинт';
-  		var fotolink = document.getElementsByClassName("photo-view").src;
-  		console.log(fotolink);
-
+  		var fotolink = document.getElementsByClassName("preview-images")[0].children[0].childNodes[1].currentSrc; 
+  		var element = [url, name, store, price, type, characteristics, fotolink];	
+		addInList(element);
 	}
 
 	function getFromDns(){
-		var url=location.pathname;
+		var url='http://www.dns-shop.ru'+location.pathname;
 		var name = document.getElementsByClassName('page-title price-item-title')[0].innerText;
 		for(var i=0; i<TypeArr.length;i++) {
   			var nameTemp=name.toLocaleLowerCase();
@@ -101,8 +98,10 @@
   		}
 		var price = document.getElementsByClassName('price_g')[0].innerText;
 		var characteristics = document.getElementsByClassName('table-params table-no-bordered')[0].innerText;
-		var store = 'ДНС';		
-		var element = [url, name, store, price, type, characteristics];		
+		var store = 'ДНС';	
+		var fotolink = document.getElementsByClassName("img")[0].children[0].childNodes[1].currentSrc;
+		console.log(fotolink);
+		var element = [url, name, store, price, type, characteristics,fotolink];		
 		addInList(element);
 	}
 

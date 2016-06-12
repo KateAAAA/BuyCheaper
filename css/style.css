@@ -32,9 +32,15 @@ td.ng-scope {
 td {
 	height: 70px;
 	vertical-align: baseline;
+	text-align:center;
 }
 .titleHeader {
+	height: 150px;
+	color:#2a829e;
+	text-align: center;
+	font-size: 14px;
 	font-weight: bold;
+	text-decoration: underline;
 }
 .difFunctions {
     display: -webkit-box;
@@ -148,6 +154,26 @@ td {
 .td {
 	text-align: center;
 }
+.pic {
+	height: 90px;
+}
+img.pic {
+	max-height: 90px;
+    width: auto;
+}
 .img.delOne {
 	padding-left: 40px;
+}
+table#table1 {
+	margin-top: 60px;
+}
+.storage{
+	color: #464600;
+}
+a.ng-binding {
+	color:#2a829e;
+}
+.sortIcon {
+	width: 24px;
+	
 }

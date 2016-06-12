@@ -1,4 +1,4 @@
-
+﻿
 $(function() {
 	var storage = chrome.storage.local;
 	var addEvent = function(element, evnt, funct){
@@ -21,8 +21,8 @@ $(function() {
 	}
 
 	var clearButton = document.createElement('button');
-	clearButton.innerHTML='Clear list';
-	clearButton.className='func';
+	clearButton.innerHTML='Очистить все';
+	clearButton.className='buyButton1';
 	addEvent(clearButton,'click',clearContent);  //см addlisten jquery
 	document.body.childNodes[1].appendChild(clearButton);
 

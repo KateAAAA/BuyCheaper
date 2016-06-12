@@ -14,7 +14,7 @@
     Поиск: <input ng-model="query">
   </div>
   <div class="func">
-    Отсортировать по:
+    <img src="images/sort.png" class="sortIcon">
     <select ng-model="orderProp">
       <option value="">дате добавления</option>
       <option value="name">алфавиту</option>
@@ -33,11 +33,11 @@
     <tr>
       <td>
         <table id="tableInfo">
-          <tr><td></td></tr>
-          <tr><td></td></tr>
-          <tr><td>наименование</td></tr>
-          <tr><td>магазин</td></tr>
-          <tr><td>цена</td></tr>
+          <tr><td><div class="clearAll"></div></td></tr>
+          <tr><td><div class="pic"></div></td></tr>
+          <tr><td><div class="titleHeader">наименование</div></td></tr>
+          <tr><td><div class="storage">магазин</div></td></tr>
+          <tr><td><div class="price">цена</div></td></tr>
           <tr><td>категория</td></tr>
           <tr><td>характеристики</td></tr>
         </table>
@@ -45,10 +45,10 @@
       <td ng-repeat="phone in phones  | filter:active | orderBy:orderProp">
       <table id="tableInfo">
         <tr><td ><div class="delOne"><a ng-click="remove(phone.url)" href="#"><img src="images/del.png" class="delOne"></a></div></td></tr>
-        <tr><td><img src="{{phone.photo}}"  width='90px'></td></tr>
-        <tr><td class="titleHeader"><a href="{{phone.url}}">{{phone.name}}</a></td></tr>
-        <tr><td>{{phone.store}}</td></tr>
-        <tr><td>{{phone.price}}</td></tr>
+        <tr><td><img src="{{phone.photo}}" class="pic"></td></tr>
+        <tr><td ><div class="titleHeader"><a href="{{phone.url}}">{{phone.name}}</a></div></td></tr>
+        <tr><td><div class="storage">{{phone.store}}</div></td></tr>
+        <tr><td><div class="price">{{phone.price}}</div></td></tr>
         <tr><td>{{phone.type}}</td></tr>
         <tr><td>{{phone.other}}</td></tr>
         
@@ -58,36 +58,7 @@
 </table>
 
 
-<!--
-    <p ng-show="active">вы выбрали <b>{{active}}</b>
-    <table id = "table1">
-    <tr>
-      <td>
-        <table id="tableInfo">
-          <tr><td></td></tr>
-          <tr><td>name</td></tr>
-          <tr><td>store/td></tr>
-          <tr><td>price</td></tr>
-          <tr><td>type</td></tr>
-          <tr><td>other</td></tr>
-        </table>
-      </td>
-     
-      <td ng-repeat="phone in phones | filter:active" class="answer" >
-      <table id="tableInfo">
-        <tr><td ><div class="delOne">del</div></td></tr>
-        <tr><td class="titleHeader"><a href="{{phone.url}}">{{phone.name}}</a></td></tr>
-        <tr><td>{{phone.store}}</td></tr>
-        <tr><td>{{phone.price}}</td></tr>
-        <tr><td>{{phone.type}}</td></tr>
-      </table>
-      </td>
-    </tr>
-</table>
 
-
-
-    </p>-->
 </div>
 
   <script type="text/javascript" src="js/jquery.min.js"></script>

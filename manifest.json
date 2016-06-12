@@ -18,9 +18,6 @@
 		"scripts": ["js/PopupScript.js"]
 	  },
 
-
-
-
   "content_scripts": [
     {
       "matches": [
@@ -49,7 +46,12 @@
       "http://www.citilink.ru/catalog/computers_and_notebooks/pc_headset/*/",
       "http://www.citilink.ru/catalog/large_and_small_appliances/small_appliances/*/*/",
       "http://www.citilink.ru/catalog/large_and_small_appliances/large_appliances/*/*/",
-      "http://technopoint.ru/catalog/*/*",
+      "http://www.citilink.ru/catalog/audio_and_digits/hi_fi/*/*/",
+      "http://www.citilink.ru/catalog/audio_and_digits/tv/*/",
+
+
+      "http://technopoint.ru/catalog/i*/*",
+      "http://technopoint.ru/catalog/defect/i*/*",
 
       "http://www.dns-shop.ru/product/*/*/"
       ],
