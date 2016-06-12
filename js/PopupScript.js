@@ -8,6 +8,12 @@ $(function() {
 			  $('.content').append("<div class='section '>"+"<img src='"+temp[i][6]+"' width='auto' height='100' alt = ''> <br> "+"<div class='name'>"+temp[i][1]+"</div>"
 			  	+"<br><div class='price'>"+temp[i][3]+"</div><br><br>");				
 			}
+			$(".content").slick({
+				dots: true,
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 1
+			  });
 		});
 
 	var addEvent = function(element, evnt, funct){
